@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #9baf74;
+}
+
+main {
+  padding-top: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.divOverflow {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+/* ⬇ Desbordamiento */
+.containerDesbordamientoPorDefecto {
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 48px;
+  /* ⬇ El contenido no es recortado y se dibuja fuera de la caja contenedora si es muy grande*/
+  /* overflow: visible; VIENE POR DEFECTO*/
+}
+
+/* ⬇ Hidden */
+.containerHidden {
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 44px;
+  /* ⬇ Oculta el contenido que se desborda de la caja */
+  overflow: hidden;
+  /* ⬇ Si el texto desborda, añadirá tres puntos seguidos*/
+  text-overflow: ellipsis;
+}
+
+/* ⬇ Scroll */
+.containerScroll {
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 48px;
+  /* ⬇ Añade un scroll en la caja */
+  overflow: scroll;
+}
+
+/* Para estilar barra: https://lyqht.github.io/scrollbar-playground/  */
+
+/* ⬇ Auto */
+.containerAuto {
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 48px;
+  /* ⬇ Determina de manera automática si colocar el scroll dependiendo del dispositivo y si desborda, si es necesario se mostrarán las barras del scroll */
+  overflow: auto;
+}

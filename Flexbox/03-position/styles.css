@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #9baf74;
+}
+
+main {
+  padding-top: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  padding: 24px 0;
+}
+
+.divPosition {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+/* ⬇ Static */
+.sectionStatic {
+  border: 5px solid #111;
+  width: 250px;
+  height: 250px;
+  box-sizing: border-box;
+  /* ⬇ Los elemetentos de CSS se posicionan de forma estática, se apilan, funcionan con normalidad  */
+  /* position: static; VIENE POR DEFECTO*/
+}
+.containerStatic {
+  background-color: aliceblue;
+  width: 100px;
+  height: 100px;
+}
+
+
+
+/* ⬇ Relative y absolute */
+.sectionAbsolute {
+  border: 5px solid #111;
+  width: 250px;
+  height: 250px;
+  box-sizing: border-box;
+  /* ⬇ Creamos un punto relativo para que sus hijos puedan tomarlo como referencia */
+  position: relative;
+}
+.containerAbsolute {
+  background-color: aliceblue;
+  width: 100px;
+  height: 100px;
+  /* ⬇ Podremos determinar sus coordenadas o modificarlas respecto al documneto(toda la página) o a un padre tenga la posición relative */
+  position: absolute;
+  /* ⬇ Con top, bottom, left, right: modificamos las coordenas */
+  bottom: 0;
+  right: 0;
+}
+
+/* Centrar un div con absolute para modales por ejemplo */
+/* 
+1)
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+2)
+  inset: 0;
+  margin: auto;
+*/
+
+
+
+/* ⬇ Fixed */
+.sectionFixed {
+  border: 5px solid #111;
+  width: 250px;
+  height: 250px;
+  box-sizing: border-box;
+}
+.containerFixed {
+  background-color: aliceblue;
+  width: 100px;
+  height: 100px;
+  /* ⬇ Parecido al absolute pero no se mueve al hacer scroll, se queda fijo en pantalla. SIEMPRE será relativo a la pantalla, no hace caso al relative de un padre por ende */
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+
+
+/* ⬇ Sticky */
+.sectionSticky {
+  border: 5px solid #111;
+  width: 250px;
+  height: 1500px;
+  box-sizing: relative;
+}
+.containerSticky {
+  background-color: aliceblue;
+  width: 100px;
+  height: 100px;
+  /* ⬇ No se queda fijo en pantalla sino que se pega al contenedor y tiene en cuenta los relative */
+  position: sticky;
+  top: 0;
+  right: 0;
+}

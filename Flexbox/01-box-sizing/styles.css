@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #9baf74;
+}
+
+main {
+  padding-top: 80px;
+  width: 100%;
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+}
+
+.containerSinBorderBox {
+  width: 100px;
+  height: 100px;
+  background: rgb(191, 228, 223);
+  padding: 10px;
+  /* La medida de nuestra caja se le suma otros factores como el padding, border o margin*/
+  /* Una caja de 100px con padding de 10px nos da una medida total de 120 * 120*/
+  /* Es decir: El ancho o alto establecido puede verse afectado y cambiar*/
+  /* ⬇ */
+  /* box-sizing: content-box; VIENE POR DEFECTO*/
+}
+
+.containerConBorderBox {
+  width: 100px;
+  height: 100px;
+  background: rgb(220, 235, 186);
+  padding: 10px;
+  /* ⬇ */
+  box-sizing: border-box;
+  /* La caja tomará exactamente la medidad establecida en el width o height*/
+  /* Una caja de 100 px con padding de 10px nosda una medida total de 100 * 100. Con 80 de width y height y 20 de padding sumando 100*/
+  /* Es decir: El ancho o alto establecido no se ve afectado por padding, margin, border, etc. Se adapta para medir exactamente lo establecido.*/
+}
