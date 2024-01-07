@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #9baf74;
+  display: flex;
+  gap: 48px;
+}
+
+.div {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ⬇ Sin z-index */
+.section {
+
+  border: 5px solid #111;
+  width: 250px;
+  height: 250px;
+  box-sizing: border-box;
+  position: relative;
+}
+.container {
+  background-color: aliceblue;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+}
+
+/* Los elementos se super posicionan si queremos que funcione el z index hay que tener en cuenta un contexto de apilamineto, por ejemplo al poner un relative o con fixed */
+/* ⬇ Es está página podemos conocer un poco más de como funciona */
+/* https://developer.mozilla.org/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context */
+
+/* ⬇ Con z-index */
+.sectionZ {
+
+  border: 5px solid #111;
+  width: 250px;
+  height: 250px;
+  box-sizing: border-box;
+
+}
+.containerZ {
+  background-color: aliceblue;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  /* ⬇ Al asignar el número damos prioridad en el eje de profundidad (z), cuando mayor el número más importancia y visibilidad */
+  z-index: 10;
+}
