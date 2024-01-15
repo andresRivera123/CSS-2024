@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #9baf74;
+  display: flex;
+  gap: 48px;
+}
+
+.div {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  padding-top: 48px;
+}
+
+.section {
+  border: 5px solid #111;
+  width: 250px;
+  height: 250px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* ⬇ Contenedor flexible este trabaja en un eje */
+section {
+  display: flex;
+  /* ⬇ Dirección del contenedor */
+  flex-direction: row;
+  /* ⬇ Dirección de escritura */
+  direction: ltr; /* left to right */
+  /* ⬇  Establece si las líneas de texto se disponen horizontal o verticalmente */
+  writing-mode: horizontal-tb;
+  /* ⬇ Si hay espacio en el contenedor, empezara a apilar */
+  flex-wrap: nowrap;
+  /* flex-flow: row wrap (Forma abreviada de usar direction y wrap), poco usada */
+}
+
+.item {
+  border: 2px solid;
+  opacity: 0.9;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(122, 122, 230);
+}
+
+.item:first-child {
+  background-color: yellow;
+}
+
+.item:last-child {
+  background-color: red;
+}
+
+/* Flex: initial; */
+
+.espacio-elementos {
+  display: flex;
+  flex-flow: row wrap;
+  border: 4px solid #000;
+}
+
+.espacio-elementos .item {
+  border: 2px solid;
+  opacity: 0.9;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(122, 122, 230);
+  /* Flex: Es una referencia relativa de cuanto espacio tienen que tomar respecto al padre */
+  /* ⬇ Flex: initial, 1, 2, 3. */
+  flex: 1;
+  /* flex-grow: 0;  Lo elementos pueden crecer? 0 o 1*/
+  /*flex-shrink: 1; Los elementos puede reducir su tamaño a un tamño más pequeño que su flex-basis, 0 o 1 */
+  /* flex-basis: auto; Los elementos tienen un tamaño base de auto */
+}
+
+.espacio-elementos .item:first-child {
+  flex: 2;
+  order: 40;
+}
+
+.espacio-elementos .item:last-child {
+  flex: 4;
+  /* ⬇ El orden en que los hijos se deben comportar, parecido al z-index */
+  order: -1;
+}
+
+.justify-content {
+  display: flex;
+  /* ⬇ Distribuye el espacio entre los elementos */
+  justify-content: space-between;
+  /* ⬇ Separación entre los elementos */
+  gap: 16px;
+  /* ⬇ Centrar a nivel de contenedor*/
+  align-items: center;
+
+  flex-flow: row wrap;
+  border: 4px solid #000;
+  width: 250px;
+  box-sizing: border-box;
+  height: 150px;
+}
+
+.justify-content div {
+  border: 1px solid;
+  box-sizing: border-box;
+  opacity: 0.9;
+  height: 50px;
+  width: 50px;
+}
