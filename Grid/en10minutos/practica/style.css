@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: system-ui;
+    background-color: aliceblue;
+}
+
+.about{
+    margin: 80px auto;
+    width: 900px;
+    height: 600 px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.about__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-column: 1/5;
+    grid-row: 1/5;
+}
+
+.about__gradient{
+    background-color: red;
+    grid-column: 2/6;
+    grid-row: 2/7;
+
+}
+
+.about__article{
+    background-color: #fff;
+    padding: 2.5em;
+    box-shadow: 0 0 10px -8px rgba(55, 51, 51, 0.897);
+    grid-column: 4/9;
+    grid-row: 3/6;
+}
+
+.about__title{
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.about__paragraph{
+    line-height: 1.5;
+}
